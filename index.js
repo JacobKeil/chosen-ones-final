@@ -3,7 +3,7 @@ import cors from "cors";
 import express from "express";
 import { Shopify } from "./lib/enums.js";
 import { getShopifyData } from "./lib/api.js";
-import { handler } from "./build/handler.js";
+import { handler } from "./client/handler.js";
 dotenv.config();
 
 const app = express();
