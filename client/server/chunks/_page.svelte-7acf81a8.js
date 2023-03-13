@@ -2,6 +2,7 @@ import { c as create_ssr_component, v as validate_component, b as add_attribute,
 import { a as articles, p as products, A as Article } from './Article-36df92a1.js';
 import './index2-424249a2.js';
 
+const image = "/_app/immutable/assets/banner2-85fbb9c4.jpg";
 const image1 = "/_app/immutable/assets/banner_pic (1)-f77d8408.jpg";
 const image2 = "/_app/immutable/assets/banner_pic (2)-9df0ae75.jpg";
 const image3 = "/_app/immutable/assets/banner_pic (3)-fa42bbe0.jpg";
@@ -10,7 +11,7 @@ const image5 = "/_app/immutable/assets/banner_pic (5)-363bf4bc.jpg";
 const image6 = "/_app/immutable/assets/banner_pic (6)-89fe3cfc.jpg";
 const image7 = "/_app/immutable/assets/banner_pic (7)-869fe2d4.jpg";
 const Banner = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let images = [image1, image2, image3, image4, image5, image6, image7];
+  let images = [image, image1, image2, image3, image4, image5, image6, image7];
   let currentImage = 0;
   function forwardSlide() {
     if (currentImage == images.length - 1) {
@@ -68,7 +69,8 @@ const FeaturedArtists = create_ssr_component(($$result, $$props, $$bindings, slo
   return `
 
 <section id="${"artists"}" class="${"relative bg-black overflow-hidden"}"><div class="${"p-8 text-[#fff]"}"><p class="${"text-2xl"}">Featured Artists</p></div>
-  <div class="${"px-8 grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3 gap-4"}">${each($articles, (article, index) => {
+  <div class="${"px-8 grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3 gap-4"}">${$articles.length < 1 ? `<p class="${"text-white"}">No featured artists at this time.</p>` : ``}
+    ${each($articles, (article, index) => {
     return `${article.tags.includes("Artist") && artistNum.length < 3 ? `${validate_component(Artist, "Artist").$$render($$result, { article }, {}, {})}
         ${escape(incrementArtistNum())}` : ``}`;
   })}</div>
@@ -148,4 +150,4 @@ ${validate_component(Blog, "Blog").$$render($$result, { articles }, {}, {})}`;
 });
 
 export { Page as default };
-//# sourceMappingURL=_page.svelte-5575090c.js.map
+//# sourceMappingURL=_page.svelte-7acf81a8.js.map
