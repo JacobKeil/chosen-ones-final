@@ -16,13 +16,15 @@ app.use(
 );
 
 app.get("/articles", async (req, res) => {
-  const articles = await getShopifyData(Shopify.ARTICLES);
-  res.json(articles);
+  // const articles = await getShopifyData(Shopify.ARTICLES);
+  // res.json(articles);
+  res.json({});
 });
 
 app.get("/products", async (req, res) => {
-  const products = await getShopifyData(Shopify.PRODUCTS);
-  res.json(products);
+  // const products = await getShopifyData(Shopify.PRODUCTS);
+  // res.json(products);
+  res.json({});
 });
 
 app.use(handler);

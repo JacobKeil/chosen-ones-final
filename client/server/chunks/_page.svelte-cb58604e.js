@@ -2,8 +2,7 @@ import { c as create_ssr_component, v as validate_component, b as add_attribute,
 import { a as articles, p as products, A as Article } from './Article-36df92a1.js';
 import './index2-424249a2.js';
 
-const image = "/_app/immutable/assets/banner2-85fbb9c4.jpg";
-const image1 = "/_app/immutable/assets/banner_pic (1)-f77d8408.jpg";
+const image1 = "/_app/immutable/assets/banner2-85fbb9c4.jpg";
 const image2 = "/_app/immutable/assets/banner_pic (2)-9df0ae75.jpg";
 const image3 = "/_app/immutable/assets/banner_pic (3)-fa42bbe0.jpg";
 const image4 = "/_app/immutable/assets/banner_pic (4)-197fd3c9.jpg";
@@ -11,7 +10,7 @@ const image5 = "/_app/immutable/assets/banner_pic (5)-363bf4bc.jpg";
 const image6 = "/_app/immutable/assets/banner_pic (6)-89fe3cfc.jpg";
 const image7 = "/_app/immutable/assets/banner_pic (7)-869fe2d4.jpg";
 const Banner = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let images = [image, image1, image2, image3, image4, image5, image6, image7];
+  let images = [image1, image2, image3, image4, image5, image6, image7];
   let currentImage = 0;
   function forwardSlide() {
     if (currentImage == images.length - 1) {
@@ -150,4 +149,4 @@ ${validate_component(Blog, "Blog").$$render($$result, { articles }, {}, {})}`;
 });
 
 export { Page as default };
-//# sourceMappingURL=_page.svelte-7acf81a8.js.map
+//# sourceMappingURL=_page.svelte-cb58604e.js.map
